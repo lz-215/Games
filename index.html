@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QinChemg - Free Online Games | Play with 50K+ Players Daily</title>
+    <meta name="description" content="Join 50,000+ daily players at QinChemg.com - Play Tanks 3D, Fortzone Battle Royale, Bricks Sort and more FREE online games. No downloads, no registration, instant play!">
+    <link rel="canonical" href="https://qinchemg.com" />
+    <meta name="keywords" content="free online games, browser games, multiplayer games, no download games, instant play games">
+        <!-- Google tag (gtag.js) --> 
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-EPHGTFNNQR"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+    
+          gtag('config', 'G-EPHGTFNNQR');
+        </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.waves.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.stars.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'theme-yellow': '#FFD700',
+                        'theme-green': '#32CD32',
+                        'theme-dark': '#1A1A1A',
+                        'theme-light': '#F0FFF0'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-theme-light text-theme-dark">
+    <div id="vanta-bg" class="fixed inset-0 -z-10"></div>
+    <!-- 风格切换按钮 -->
+    <div class="fixed top-4 right-4 z-50 flex space-x-2 items-center">
+      <button onclick="setVanta('waves')" class="bg-theme-green text-white px-3 py-1 rounded shadow">波浪</button>
+      <button onclick="setVanta('net')" class="bg-theme-yellow text-white px-3 py-1 rounded shadow">粒子</button>
+      <button onclick="setVanta('stars')" class="bg-theme-dark text-white px-3 py-1 rounded shadow">星空</button>
+      <input type="color" id="vantaColor" value="#32cd32" title="自定义主色" class="w-8 h-8 p-0 border-2 border-gray-300 rounded cursor-pointer">
+    </div>
+    <!-- 导航栏 -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <span class="text-2xl font-bold text-theme-green">QC</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#games" class="text-gray-700 hover:text-theme-green transition">Play Now</a>
+                    <a href="#features" class="text-gray-700 hover:text-theme-green transition">Features</a>
+                    <a href="#guide" class="text-gray-700 hover:text-theme-green transition">Guide</a>
+                    <a href="#tips" class="text-gray-700 hover:text-theme-green transition">Tips</a>
+                </div>
+                <div class="md:hidden">
+                    <button class="text-gray-700 hover:text-theme-green">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="bg-gradient-to-r from-theme-green to-theme-yellow text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="text-center mb-8">
+                <span class="bg-white text-theme-green px-4 py-2 rounded-full text-sm font-semibold mb-4 inline-block">
+                    <i class="fas fa-users mr-2"></i>50,000+ Daily Players
+                </span>
+                <h1 class="text-4xl md:text-6xl font-bold mb-6">
+                    QinChemg Games
+                </h1>
+                <p class="text-xl max-w-3xl mx-auto mb-8">
+                    Your Ultimate Destination for FREE Online Gaming Entertainment
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#games" class="bg-white text-theme-green px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition">
+                        Play Now - It's Free!
+                    </a>
+                    <a href="#guide" class="border-2 border-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-theme-green transition">
+                        Learn More
+                    </a>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                <div class="bg-white/10 backdrop-blur-sm p-4 rounded-lg">
+                    <div class="text-3xl font-bold">50K+</div>
+                    <div class="text-sm">Daily Players</div>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm p-4 rounded-lg">
+                    <div class="text-3xl font-bold">100%</div>
+                    <div class="text-sm">Free Games</div>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm p-4 rounded-lg">
+                    <div class="text-3xl font-bold">24/7</div>
+                    <div class="text-sm">Support</div>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm p-4 rounded-lg">
+                    <div class="text-3xl font-bold">4.9/5</div>
+                    <div class="text-sm">User Rating</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <!-- 为什么选择我们 -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-8">Why Choose QinChemg?</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-md text-center">
+                    <i class="fas fa-gamepad text-4xl text-theme-green mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">100% Free Games</h3>
+                    <p class="text-gray-600">No hidden costs, no subscriptions. All games are completely free to play!</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md text-center">
+                    <i class="fas fa-bolt text-4xl text-theme-yellow mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Instant Play</h3>
+                    <p class="text-gray-600">No downloads required. Play directly in your browser on any device!</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md text-center">
+                    <i class="fas fa-users text-4xl text-theme-green mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Huge Community</h3>
+                    <p class="text-gray-600">Join thousands of players online right now!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 游戏列表 -->
+        <section id="games" class="space-y-16">
+            <!-- Tanks 3D -->
+            <div class="bg-white rounded-xl shadow-xl overflow-hidden">
+                <div class="p-8">
+                    <div class="flex justify-between items-start mb-4">
+                        <h2 class="text-3xl font-bold text-theme-green">Tanks 3D</h2>
+                        <span class="bg-theme-green text-white px-4 py-1 rounded-full text-sm font-semibold">
+                            FREE TO PLAY
+                        </span>
+                    </div>
+                    <p class="text-gray-600 mb-6">
+                        Experience the ultimate tank warfare simulation in stunning 3D graphics! Tanks 3D offers an immersive combat experience where you'll command powerful military vehicles across diverse battlefields. Choose from a variety of tanks, each with unique characteristics and weapon systems. Engage in intense PvP battles, complete challenging missions, and upgrade your arsenal to become the ultimate tank commander. With realistic physics, dynamic weather effects, and strategic gameplay, Tanks 3D delivers an authentic military simulation experience.
+                    </p>
+                    <!-- 游戏截图优化展示 -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                        <div>
+                            <img src="images/tanks3d-1.png" alt="Tanks 3D 战斗场景1" class="rounded-lg shadow-md w-full object-cover">
+                            <p class="text-center text-sm text-gray-500 mt-2">Login Screen - Enter your username and join the battle!</p>
+                        </div>
+                        <div>
+                            <img src="images/tanks3d-2.png" alt="Tanks 3D 战斗场景2" class="rounded-lg shadow-md w-full object-cover">
+                            <p class="text-center text-sm text-gray-500 mt-2">In-game Battle - Compete with 180+ players online</p>
+                        </div>
+                        <div>
+                            <img src="images/tanks3d-3.png" alt="Tanks 3D 战斗场景3" class="rounded-lg shadow-md w-full object-cover">
+                            <p class="text-center text-sm text-gray-500 mt-2">Explore Vast Maps - Realistic 3D environments</p>
+                        </div>
+                    </div>
+                    <!-- 按钮 -->
+                    <a href="https://www.crazygames.com/game/tanks-3d" target="_blank">
+                        <button class="bg-green-400 hover:bg-green-500 text-white font-bold py-3 px-8 rounded-full shadow-lg mb-6 transition">
+                            Play Now for Free
+                        </button>
+                    </a>
+                    <!-- 游戏界面（用图片模拟） -->
+                    <a href="https://www.crazygames.com/game/tanks-3d" target="_blank" class="block relative w-full max-w-4xl mx-auto group">
+                        <img src="images/tanks3d-screenshot.jpg" alt="Tanks 3D 游戏截图" class="rounded-lg shadow-lg w-full object-cover" style="height:400px;">
+                        <!-- 悬浮遮罩和提示 -->
+                        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition rounded-lg">
+                            <span class="text-white text-2xl font-bold">点击进入游戏</span>
+                        </div>
+                    </a>
+
+                    <div class="grid md:grid-cols-2 gap-6 mb-8">
+                        <div>
+                            <h3 class="text-xl font-semibold mb-3">Game Features</h3>
+                            <ul class="space-y-2 text-gray-700">
+                                <li class="flex items-center">
+                                    <i class="fas fa-check-circle text-theme-green mr-2"></i>
+                                    Realistic 3D tank physics
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check-circle text-theme-green mr-2"></i>
+                                    Multiple tank types
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check-circle text-theme-green mr-2"></i>
+                                    Various battle arenas
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-3">How to Play</h3>
+                            <ul class="space-y-2 text-gray-700">
+                                <li class="flex items-center">
+                                    <i class="fas fa-arrow-right text-theme-green mr-2"></i>
+                                    WASD to move
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-arrow-right text-theme-green mr-2"></i>
+                                    Mouse to aim
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-arrow-right text-theme-green mr-2"></i>
+                                    Left click to shoot
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- 用户评价 -->
+                    <div class="mt-8">
+                        <h3 class="text-xl font-semibold mb-4">User Reviews</h3>
+                        <div class="space-y-4">
+                            <div class="bg-theme-light p-4 rounded-lg">
+                                <div class="flex items-center mb-2">
+                                    <img src="https://via.placeholder.com/40" alt="User Avatar" class="w-10 h-10 rounded-full mr-3">
+                                    <div>
+                                        <h4 class="font-semibold">John D.</h4>
+                                        <div class="flex text-theme-yellow">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="text-gray-600">"Amazing tank physics and graphics! The multiplayer battles are intense and strategic. Highly recommended!"</p>
+                            </div>
+                            <div class="bg-theme-light p-4 rounded-lg">
+                                <div class="flex items-center mb-2">
+                                    <img src="https://via.placeholder.com/40" alt="User Avatar" class="w-10 h-10 rounded-full mr-3">
+                                    <div>
+                                        <h4 class="font-semibold">Sarah M.</h4>
+                                        <div class="flex text-theme-yellow">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half-alt"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="text-gray-600">"Great game! The tank customization options are extensive, and the controls are intuitive."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fortzone Battle Royale -->
+            <div class="bg-white rounded-xl shadow-xl overflow-hidden">
+                <div class="p-8">
+                    <div class="flex justify-between items-start mb-4">
+                        <h2 class="text-3xl font-bold text-theme-green">Fortzone Battle Royale</h2>
+                        <span class="bg-theme-green text-white px-4 py-1 rounded-full text-sm font-semibold">
+                            FREE TO PLAY
+                        </span>
+                    </div>
+                    <p class="text-gray-600 mb-6">
+                        Enter the ultimate battle royale arena in Fortzone! This action-packed multiplayer game combines intense combat with strategic building mechanics. Drop into a massive map with 100 players, scavenge for weapons and resources, build fortifications, and fight to be the last one standing. With its unique blend of shooting and construction gameplay, Fortzone offers an innovative take on the battle royale genre. Master the art of quick building, perfect your aim, and outsmart your opponents in this thrilling survival experience.
+                    </p>
+
+                    <!-- 游戏截图 -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                        <img src="images/fortzonebattleroyale-1.png" alt="Fortzone Gameplay" class="rounded-lg shadow-md">
+                        <img src="images/fortzonebattleroyale-2.png" alt="Fortzone Gameplay" class="rounded-lg shadow-md">
+                        <img src="images/fortzonebattleroyale-3.png" alt="Fortzone Gameplay" class="rounded-lg shadow-md">
+                    </div>
+
+                    <div class="flex justify-center mb-8">
+                        <a href="https://www.crazygames.com/game/fortzone-battle-royale-xkd" target="_blank" rel="noopener" class="bg-theme-green hover:bg-theme-yellow text-white font-bold py-3 px-8 rounded-full text-lg shadow-lg transition duration-200">
+                            Play Now for Free
+                        </a>
+                    </div>
+<!--                     <div id="fortzone-play" class="aspect-w-16 aspect-h-9 w-full mb-6">
+                        <iframe 
+                            src="https://cloud.onlinegames.io/games/2025/unity/fortzone-battle-royale/index-0g.htm"
+                            class="w-full h-[600px] rounded-lg shadow-lg"
+                            allowfullscreen>
+                        </iframe>
+                    </div> -->
+
+                    <div class="grid md:grid-cols-2 gap-6 mb-8">
+                        <div>
+                            <h3 class="text-xl font-semibold mb-3">Game Features</h3>
+                            <ul class="space-y-2 text-gray-700">
+                                <li class="flex items-center">
+                                    <i class="fas fa-check-circle text-theme-green mr-2"></i>
+                                    100-player battles
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check-circle text-theme-green mr-2"></i>
+                                    Building mechanics
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check-circle text-theme-green mr-2"></i>
+                                    Multiple weapons
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-3">How to Play</h3>
+                            <ul class="space-y-2 text-gray-700">
+                                <li class="flex items-center">
+                                    <i class="fas fa-arrow-right text-theme-green mr-2"></i>
+                                    WASD to move
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-arrow-right text-theme-green mr-2"></i>
+                                    Space to jump
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-arrow-right text-theme-green mr-2"></i>
+                                    F to build
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- 用户评价 -->
+                    <div class="mt-8">
+                        <h3 class="text-xl font-semibold mb-4">User Reviews</h3>
+                        <div class="space-y-4">
+                            <div class="bg-theme-light p-4 rounded-lg">
+                                <div class="flex items-center mb-2">
+                                    <img src="https://via.placeholder.com/40" alt="User Avatar" class="w-10 h-10 rounded-full mr-3">
+                                    <div>
+                                        <h4 class="font-semibold">Mike R.</h4>
+                                        <div class="flex text-theme-yellow">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="text-gray-600">"The building mechanics are revolutionary! Best battle royale game I've played in years."</p>
+                            </div>
+                            <div class="bg-theme-light p-4 rounded-lg">
+                                <div class="flex items-center mb-2">
+                                    <img src="https://via.placeholder.com/40" alt="User Avatar" class="w-10 h-10 rounded-full mr-3">
+                                    <div>
+                                        <h4 class="font-semibold">Emma L.</h4>
+                                        <div class="flex text-theme-yellow">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="text-gray-600">"Amazing graphics and smooth gameplay. The building system adds a whole new layer of strategy!"</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bricks Sort -->
+            <div class="bg-white rounded-xl shadow-xl overflow-hidden">
+                <div class="p-8">
+                    <div class="flex justify-between items-start mb-4">
+                        <h2 class="text-3xl font-bold text-theme-green">Bricks Sort</h2>
+                        <span class="bg-theme-green text-white px-4 py-1 rounded-full text-sm font-semibold">
+                            FREE TO PLAY
+                        </span>
+                    </div>
+                    <p class="text-gray-600 mb-6">
+                        Challenge your puzzle-solving skills in Bricks Sort, the addictive color-matching game that will keep you entertained for hours! Arrange colorful bricks in perfect patterns, solve challenging puzzles, and unlock new levels as you progress. With its intuitive drag-and-drop mechanics, beautiful visual effects, and increasingly complex challenges, Bricks Sort offers a perfect blend of casual fun and strategic thinking. Whether you're a puzzle enthusiast or just looking for a relaxing game to play, Bricks Sort will captivate you with its engaging gameplay and satisfying color-matching mechanics.
+                    </p>
+
+                    <!-- 游戏截图 -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                        <img src="images/brickssort-1.png" alt="Bricks Sort Gameplay" class="rounded-lg shadow-md">
+                        <img src="images/brickssort-2.png" alt="Bricks Sort Gameplay" class="rounded-lg shadow-md">
+                        <img src="images/brickssort-3.png" alt="Bricks Sort Gameplay" class="rounded-lg shadow-md">
+                    </div>
+
+                    <div class="flex justify-center mb-8">
+                        <a href="https://www.crazygames.com/game/bricks-sort-construction-3d" target="_blank" rel="noopener" class="bg-theme-green hover:bg-theme-yellow text-white font-bold py-3 px-8 rounded-full text-lg shadow-lg transition duration-200">
+                            Play Now for Free
+                        </a>
+                    </div>
+<!--                     <div id="brickssort-play" class="aspect-w-16 aspect-h-9 w-full mb-6">
+                        <iframe 
+                            src="https://cloud.onlinegames.io/games/2025/unity/bricks-sort/index-0g.htm"
+                            class="w-full h-[600px] rounded-lg shadow-lg"
+                            allowfullscreen>
+                        </iframe>
+                    </div> -->
+
+                    <div class="grid md:grid-cols-2 gap-6 mb-8">
+                        <div>
+                            <h3 class="text-xl font-semibold mb-3">Game Features</h3>
+                            <ul class="space-y-2 text-gray-700">
+                                <li class="flex items-center">
+                                    <i class="fas fa-check-circle text-theme-green mr-2"></i>
+                                    Color-matching puzzles
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check-circle text-theme-green mr-2"></i>
+                                    Multiple levels
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check-circle text-theme-green mr-2"></i>
+                                    Power-ups
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-3">How to Play</h3>
+                            <ul class="space-y-2 text-gray-700">
+                                <li class="flex items-center">
+                                    <i class="fas fa-arrow-right text-theme-green mr-2"></i>
+                                    Drag and drop bricks
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-arrow-right text-theme-green mr-2"></i>
+                                    Match colors
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-arrow-right text-theme-green mr-2"></i>
+                                    Clear levels
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- 用户评价 -->
+                    <div class="mt-8">
+                        <h3 class="text-xl font-semibold mb-4">User Reviews</h3>
+                        <div class="space-y-4">
+                            <div class="bg-theme-light p-4 rounded-lg">
+                                <div class="flex items-center mb-2">
+                                    <img src="https://via.placeholder.com/40" alt="User Avatar" class="w-10 h-10 rounded-full mr-3">
+                                    <div>
+                                        <h4 class="font-semibold">David K.</h4>
+                                        <div class="flex text-theme-yellow">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="text-gray-600">"Perfect for relaxing after work! The puzzles are challenging but not frustrating."</p>
+                            </div>
+                            <div class="bg-theme-light p-4 rounded-lg">
+                                <div class="flex items-center mb-2">
+                                    <img src="https://via.placeholder.com/40" alt="User Avatar" class="w-10 h-10 rounded-full mr-3">
+                                    <div>
+                                        <h4 class="font-semibold">Lisa W.</h4>
+                                        <div class="flex text-theme-yellow">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half-alt"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="text-gray-600">"Beautiful graphics and smooth gameplay. The color-matching mechanics are very satisfying!"</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 用户评价统计 -->
+        <section class="mt-16 bg-white rounded-xl shadow-xl p-8">
+            <h2 class="text-3xl font-bold text-center mb-8">What Our Players Say</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-theme-green mb-2">98%</div>
+                    <p class="text-gray-600">Would Recommend</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-theme-yellow mb-2">4.9/5</div>
+                    <p class="text-gray-600">Average Rating</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-theme-green mb-2">50K+</div>
+                    <p class="text-gray-600">Daily Active Players</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-theme-dark text-white mt-16 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">QinChemg Games</h3>
+                    <p class="text-gray-400">Your ultimate gaming destination.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#games" class="text-gray-400 hover:text-theme-yellow transition">All Games</a></li>
+                        <li><a href="#guide" class="text-gray-400 hover:text-theme-yellow transition">How to Play</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-theme-yellow transition">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Connect With Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-theme-yellow transition">
+                            <i class="fab fa-twitter text-2xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-theme-yellow transition">
+                            <i class="fab fa-facebook text-2xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-theme-yellow transition">
+                            <i class="fab fa-discord text-2xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center">
+                <p><a href="https://beian.miit.gov.cn" rel="nofollow" class="hover:text-theme-yellow">@渝ICP备2025054506号</a></p>
+                <p>Contact Us: ytsgabcde2323@2925.com</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 移动端优化 -->
+    <style>
+        @media (max-width: 640px) {
+            .game-card {
+                margin: 0 -1rem;
+                border-radius: 0;
+            }
+            .game-iframe {
+                height: 400px;
+            }
+        }
+    </style>
+    <script>
+    let vantaEffect = null;
+
+    function setVanta(type) {
+        if (vantaEffect) vantaEffect.destroy();
+        if (type === 'waves') {
+            vantaEffect = VANTA.WAVES({
+                el: "#vanta-bg",
+                color: 0x32cd32,
+                shininess: 50,
+                waveHeight: 20,
+                waveSpeed: 1,
+                zoom: 1.2
+            });
+        } else if (type === 'net') {
+            vantaEffect = VANTA.NET({
+                el: "#vanta-bg",
+                color: 0x32cd32,
+                backgroundColor: 0xf0fff0,
+                points: 12.0,
+                maxDistance: 22.0,
+                spacing: 18.0
+            });
+        } else if (type === 'stars') {
+            vantaEffect = VANTA.STARS({
+                el: "#vanta-bg",
+                color: 0xffd700,
+                backgroundColor: 0x1a1a1a,
+                size: 1.5,
+                speed: 1.0
+            });
+        }
+    }
+
+    // 默认星空风格
+    setVanta('stars');
+    </script>
+</body>
+</html> 
